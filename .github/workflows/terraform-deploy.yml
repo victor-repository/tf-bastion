@@ -22,8 +22,8 @@ jobs:
         run: |
           mkdir -p ~/.aws
           echo "[default]" > ~/.aws/credentials
-          echo "aws_access_key_id = AKIA3T7AMJ32ODA7OB5C" >> ~/.aws/credentials
-          echo "aws_secret_access_key = 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" >> ~/.aws/credentials
+          echo "aws_access_key_id = ${{AWS_ACCESS_KEY_ID}}" >> ~/.aws/credentials
+          echo "aws_secret_access_key = ${{AWS_SECRET_ACCESS_KEY}}" >> ~/.aws/credentials
 
       # Downloads a specific version of Terraform CLI and adds it to PATH
       # Marketplace: https://github.com/marketplace/actions/hashicorp-setup-terraform
